@@ -1,0 +1,75 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  FARMER
+  BUYER
+  TRANSPORTER
+  ADMIN
+}
+
+enum OrderStatus {
+  PENDING
+  ACCEPTED
+  SHIPPED
+  DELIVERED
+  CANCELLED
+}
+
+model User {
+  id        String   @id @default(uuid())
+  name      String
+  email     String   @unique
+  role      Role     @default(BUYER)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  produces  Produce[]
+  orders    Order[]
+  deliveries Delivery[]
+}
+
+model Produce {
+  id          String   @id @default(uuid())
+  title       String
+  category    String
+  quantity    Float
+  unit        String
+  price       Float
+  images      String[]
+  farmerId    String
+  farmer      User     @relation(fields: [farmerId], references: [id])
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  orders      Order[]
+}
+
+model Order {
+  id          String      @id @default(uuid())
+  buyerId     String
+  buyer       User        @relation(fields: [buyerId], references: [id])
+  produceId   String
+  produce     Produce     @relation(fields: [produceId], references: [id])
+  quantity    Float
+  status      OrderStatus @default(PENDING)
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+  delivery    Delivery?
+}
+
+model Delivery {
+  id            String   @id @default(uuid())
+  transporterId String
+  transporter   User     @relation(fields: [transporterId], references: [id])
+  orderId       String   @unique
+  order         Order    @relation(fields: [orderId], references: [id])
+  status        String   @default("PENDING")
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
