@@ -1,0 +1,96 @@
+
+> web@1.0.0 build
+> next build
+
+  ▲ Next.js 15.0.0
+
+   Creating an optimized production build ...
+<w> [webpack.cache.PackFileCacheStrategy] Skipped not serializable cache item 'Compilation/modules|/home/solodev/Documents/GranTFoxMaintainer/farmlink-africa/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[2]!/home/solodev/Documents/GranTFoxMaintainer/farmlink-africa/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[3]!/home/solodev/Documents/GranTFoxMaintainer/farmlink-africa/node_modules/tailwindcss/index.css': No serializer registered for PostCSSSyntaxError
+<w> while serializing webpack/lib/cache/PackFileCacheStrategy.PackContentItems -> webpack/lib/NormalModule -> webpack/lib/ModuleBuildError -> PostCSSSyntaxError
+Failed to compile.
+
+../../node_modules/tailwindcss/index.css:534:1
+Syntax error: /home/solodev/Documents/GranTFoxMaintainer/farmlink-africa/node_modules/tailwindcss/index.css `@layer base` is used but no matching `@tailwind base` directive is present.
+
+  532 | }
+  533 | 
+> 534 | @layer base {
+      | ^
+  535 |   /*
+  536 |   1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+
+./src/app/globals.css
+Syntax error: /home/solodev/Documents/GranTFoxMaintainer/farmlink-africa/node_modules/tailwindcss/index.css `@layer base` is used but no matching `@tailwind base` directive is present. (534:1)
+
+  532 | }
+  533 | 
+> 534 | @layer base {
+      | ^
+  535 |   /*
+  536 |   1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+
+    at tryRunOrWebpackError (/home/solodev/Documents/GranTFoxMaintainer/farmlink-africa/node_modules/next/dist/compiled/webpack/bundle5.js:28:313010)
+    at __webpack_require_module__ (/home/solodev/Documents/GranTFoxMaintainer/farmlink-africa/node_modules/next/dist/compiled/webpack/bundle5.js:28:131165)
+    at __nested_webpack_require_153728__ (/home/solodev/Documents/GranTFoxMaintainer/farmlink-africa/node_modules/next/dist/compiled/webpack/bundle5.js:28:130607)
+    at Module.<anonymous> (/home/solodev/Documents/GranTFoxMaintainer/farmlink-africa/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[2]!/home/solodev/Documents/GranTFoxMaintainer/farmlink-africa/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[3]!/home/solodev/Documents/GranTFoxMaintainer/farmlink-africa/apps/web/src/app/globals.css:7:303)
+    at /home/solodev/Documents/GranTFoxMaintainer/farmlink-africa/node_modules/next/dist/compiled/webpack/bundle5.js:28:922602
+    at Hook.eval [as call] (eval at create (/home/solodev/Documents/GranTFoxMaintainer/farmlink-africa/node_modules/next/dist/compiled/webpack/bundle5.js:13:28636), <anonymous>:7:1)
+    at /home/solodev/Documents/GranTFoxMaintainer/farmlink-africa/node_modules/next/dist/compiled/webpack/bundle5.js:28:131198
+    at tryRunOrWebpackError (/home/solodev/Documents/GranTFoxMaintainer/farmlink-africa/node_modules/next/dist/compiled/webpack/bundle5.js:28:312964)
+    at __webpack_require_module__ (/home/solodev/Documents/GranTFoxMaintainer/farmlink-africa/node_modules/next/dist/compiled/webpack/bundle5.js:28:131165)
+    at __nested_webpack_require_153728__ (/home/solodev/Documents/GranTFoxMaintainer/farmlink-africa/node_modules/next/dist/compiled/webpack/bundle5.js:28:130607)
+-- inner error --
+Syntax error: /home/solodev/Documents/GranTFoxMaintainer/farmlink-africa/node_modules/tailwindcss/index.css `@layer base` is used but no matching `@tailwind base` directive is present. (534:1)
+
+  532 | }
+  533 | 
+> 534 | @layer base {
+      | ^
+  535 |   /*
+  536 |   1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+
+    at Object.<anonymous> (/home/solodev/Documents/GranTFoxMaintainer/farmlink-africa/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[2]!/home/solodev/Documents/GranTFoxMaintainer/farmlink-africa/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[3]!/home/solodev/Documents/GranTFoxMaintainer/farmlink-africa/node_modules/tailwindcss/index.css:1:7)
+    at /home/solodev/Documents/GranTFoxMaintainer/farmlink-africa/node_modules/next/dist/compiled/webpack/bundle5.js:28:922602
+    at Hook.eval [as call] (eval at create (/home/solodev/Documents/GranTFoxMaintainer/farmlink-africa/node_modules/next/dist/compiled/webpack/bundle5.js:13:28636), <anonymous>:7:1)
+    at /home/solodev/Documents/GranTFoxMaintainer/farmlink-africa/node_modules/next/dist/compiled/webpack/bundle5.js:28:131198
+    at tryRunOrWebpackError (/home/solodev/Documents/GranTFoxMaintainer/farmlink-africa/node_modules/next/dist/compiled/webpack/bundle5.js:28:312964)
+    at __webpack_require_module__ (/home/solodev/Documents/GranTFoxMaintainer/farmlink-africa/node_modules/next/dist/compiled/webpack/bundle5.js:28:131165)
+    at __nested_webpack_require_153728__ (/home/solodev/Documents/GranTFoxMaintainer/farmlink-africa/node_modules/next/dist/compiled/webpack/bundle5.js:28:130607)
+    at Module.<anonymous> (/home/solodev/Documents/GranTFoxMaintainer/farmlink-africa/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[2]!/home/solodev/Documents/GranTFoxMaintainer/farmlink-africa/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[3]!/home/solodev/Documents/GranTFoxMaintainer/farmlink-africa/apps/web/src/app/globals.css:7:303)
+    at /home/solodev/Documents/GranTFoxMaintainer/farmlink-africa/node_modules/next/dist/compiled/webpack/bundle5.js:28:922602
+    at Hook.eval [as call] (eval at create (/home/solodev/Documents/GranTFoxMaintainer/farmlink-africa/node_modules/next/dist/compiled/webpack/bundle5.js:13:28636), <anonymous>:7:1)
+
+Generated code for /home/solodev/Documents/GranTFoxMaintainer/farmlink-africa/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[2]!/home/solodev/Documents/GranTFoxMaintainer/farmlink-africa/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[3]!/home/solodev/Documents/GranTFoxMaintainer/farmlink-africa/node_modules/tailwindcss/index.css
+
+Generated code for /home/solodev/Documents/GranTFoxMaintainer/farmlink-africa/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[2]!/home/solodev/Documents/GranTFoxMaintainer/farmlink-africa/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[3]!/home/solodev/Documents/GranTFoxMaintainer/farmlink-africa/apps/web/src/app/globals.css
+ 1 | __webpack_require__.r(__webpack_exports__);
+ 2 | /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+ 3 | /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+ 4 | /* harmony export */ });
+ 5 | /* harmony import */ var _node_modules_next_dist_build_webpack_loaders_css_loader_src_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("/home/solodev/Documents/GranTFoxMaintainer/farmlink-africa/node_modules/next/dist/build/webpack/loaders/css-loader/src/runtime/api.js");
+ 6 | /* harmony import */ var _node_modules_next_dist_build_webpack_loaders_css_loader_src_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_next_dist_build_webpack_loaders_css_loader_src_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+ 7 | /* harmony import */ var _node_modules_next_dist_build_webpack_loaders_css_loader_src_index_js_ruleSet_1_rules_13_oneOf_10_use_2_node_modules_next_dist_build_webpack_loaders_postcss_loader_src_index_js_ruleSet_1_rules_13_oneOf_10_use_3_node_modules_tailwindcss_index_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("/home/solodev/Documents/GranTFoxMaintainer/farmlink-africa/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[2]!/home/solodev/Documents/GranTFoxMaintainer/farmlink-africa/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[3]!/home/solodev/Documents/GranTFoxMaintainer/farmlink-africa/node_modules/tailwindcss/index.css");
+ 8 | /* harmony import */ var _node_modules_next_dist_build_webpack_loaders_css_loader_src_index_js_ruleSet_1_rules_13_oneOf_10_use_2_node_modules_next_dist_build_webpack_loaders_postcss_loader_src_index_js_ruleSet_1_rules_13_oneOf_10_use_3_node_modules_tailwindcss_index_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_next_dist_build_webpack_loaders_css_loader_src_index_js_ruleSet_1_rules_13_oneOf_10_use_2_node_modules_next_dist_build_webpack_loaders_postcss_loader_src_index_js_ruleSet_1_rules_13_oneOf_10_use_3_node_modules_tailwindcss_index_css__WEBPACK_IMPORTED_MODULE_1__);
+ 9 | // Imports
+10 | 
+11 | 
+12 | var ___CSS_LOADER_EXPORT___ = _node_modules_next_dist_build_webpack_loaders_css_loader_src_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(false);
+13 | ___CSS_LOADER_EXPORT___.i((_node_modules_next_dist_build_webpack_loaders_css_loader_src_index_js_ruleSet_1_rules_13_oneOf_10_use_2_node_modules_next_dist_build_webpack_loaders_postcss_loader_src_index_js_ruleSet_1_rules_13_oneOf_10_use_3_node_modules_tailwindcss_index_css__WEBPACK_IMPORTED_MODULE_1___default()));
+14 | // Module
+15 | ___CSS_LOADER_EXPORT___.push([module.id, "\n\n ", ""]);
+16 | // Exports
+17 | /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+18 | 
+
+Import trace for requested module:
+./src/app/globals.css
+
+
+> Build failed because of webpack errors
+npm error Lifecycle script `build` failed with error:
+npm error code 1
+npm error path /home/solodev/Documents/GranTFoxMaintainer/farmlink-africa/apps/web
+npm error workspace web@1.0.0
+npm error location /home/solodev/Documents/GranTFoxMaintainer/farmlink-africa/apps/web
+npm error command failed
+npm error command sh -c next build
