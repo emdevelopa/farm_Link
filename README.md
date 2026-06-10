@@ -271,3 +271,6 @@ MIT
 ## Join the Mission
 
 Help us build the future of agricultural commerce infrastructure on Stellar.
+
+
+npm run dev -w web
